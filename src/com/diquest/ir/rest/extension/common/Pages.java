@@ -6,5 +6,5 @@ public class Pages {
 	/** 페이지 기본값 **/
 	public static final String CURRENT_PAGE = "1" ;
 	/** 페이지당 출력 건수 기본값 **/
-	public static final String ROWS			= "5";
+	public static final String ROWS			= "10";
 }
