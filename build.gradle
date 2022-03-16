@@ -7,7 +7,12 @@
  */
 
 // Apply the java-library plugin to add support for Java Library
-apply plugin: 'java-library'
+//apply plugin: 'java-library'
+plugins {
+    // Apply the java-library plugin for API and implementation separation.
+    id 'java-library'
+    id 'org.springframework.boot' version '2.5.1'
+}
 
 // In this section you declare where to find the dependencies of your project
 repositories {
@@ -27,12 +32,12 @@ dependencies {
     testImplementation 'junit:junit:4.12'
 }
 
-bootJar {
-   jar.enabled = true // 빌드시 jar 을 실행
+jar {
+	enabled = true
+	archiveClassifier = ''
 }
- 
-jar {    
-   manifest { // 빌드시 Main-Class 설정
-       attributes 'Main-Class': 'com.testing.test.TestingApplication'
-    }    
+
+bootJar {
+   //jar.enabled = true // 빌드시 jar 을 실행
+	bootJar.enabled=false
 }
