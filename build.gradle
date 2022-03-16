@@ -30,6 +30,7 @@ dependencies {
 
     // Use JUnit test framework
     testImplementation 'junit:junit:4.12'
+    
 }
 
 jar {
@@ -37,7 +38,3 @@ jar {
 	//archiveClassifier = ''
 }
 
-bootJar {
-   //jar.enabled = true // 빌드시 jar 을 실행
-	bootJar.enabled=false
-}
